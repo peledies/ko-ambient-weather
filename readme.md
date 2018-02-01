@@ -13,20 +13,22 @@ This module is built for interacting with the [ambientweather.net](http://ambien
 
 ## Usage
 
+#### Build the cache
 Build the `cache` settings object
-```
+```php
   $KOCacheSettings = new \KO\Cache\Settings();
   $KOCacheSettings->setValidity(15);
   $KOCacheSettings->setFile('data_cache.json');
 ```
 
 Instantiate a new cache object with the settings
-```
+```php
   $KOCache = new \KO\Cache\Cache($KOCacheSettings);
 ```
 
+#### Build the AmbientWeather object
 Build the `AmbientWeather` settings object
-```
+```php
   $AWSettings = new \KO\AmbientWeather\Settings();
   $AWSettings->setApiKey('your-api-key-here');
   $AWSettings->setApplicationKey('your-application-key-here');
@@ -36,7 +38,7 @@ Build the `AmbientWeather` settings object
 ```
 
 Instantiate a new `AmbientWeather` object with the settings
-```
+```php
   $AW = new \KO\AmbientWeather\AmbientWeather($AWSettings, $KOCache);
 ```
 
