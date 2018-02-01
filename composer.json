@@ -1,0 +1,17 @@
+{
+    "name": "ko/ambient-weather",
+    "description": "A PHP SDK for interacting with the ambient weather api to retrieve data and draw canvas visualizations",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Deac Karns",
+            "email": "peledies@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+          "KO\\AmbientWeather\\": "src"
+        }
+    }
+}
