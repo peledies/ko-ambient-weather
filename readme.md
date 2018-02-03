@@ -42,6 +42,19 @@ Instantiate a new `AmbientWeather` object with the settings
   $AW = new \KO\AmbientWeather\AmbientWeather($AWSettings, $KOCache);
 ```
 
+## Charts
+```
+new KO\AmbientWeather\Charts\Wind();
+new KO\AmbientWeather\Charts\Temperature();
+new KO\AmbientWeather\Charts\Barometric();
+```
+
+## Gauges
+```
+KO\AmbientWeather\Gauges\WindDirection();
+KO\AmbientWeather\Gauges\WindSpeed();
+```
+
 ## Documentation
 
 See the full [Documentation](http://ko.karnsonline.com/ambient-weather) for more details.

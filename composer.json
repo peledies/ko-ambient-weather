@@ -8,7 +8,9 @@
             "email": "peledies@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+      "ko/json-cache":"^0.0.*"
+    },
     "autoload": {
         "psr-4": {
           "KO\\AmbientWeather\\": "src"
