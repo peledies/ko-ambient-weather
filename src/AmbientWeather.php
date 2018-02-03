@@ -10,7 +10,7 @@ class AmbientWeather
 
   	private $apiUrl = "https://api.ambientweather.net/v1/devices/";
 
-  	private $limit = 4;
+  	private $limit = 288;
 
 	function __construct(Settings $settings, Cache $cache = null)
 	{
@@ -30,6 +30,8 @@ class AmbientWeather
 				$this->cache = new Cache($settings);
 			}
 		}
+
+		$this->data = array_reverse($this->cache->getData());
 	}
 
 	private function fetch(){
@@ -43,6 +45,6 @@ class AmbientWeather
 	}
 
 	public function currentConditions(){
-		return $this->data[0];
+		return $this->data[count($this->data) - 1];
 	}
 }
