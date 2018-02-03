@@ -39,7 +39,7 @@ class Settings implements SettingsInterface
 	}
 
 	public function getInterval(){
-		return $this->intervall;
+		return $this->interval;
 	}
 
 	public function setTimeframe($hours){
