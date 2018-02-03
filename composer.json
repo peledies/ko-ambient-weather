@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-      "ko/json-cache":"^0.0.*"
+      "ko/json-cache":"0.0.*"
     },
     "autoload": {
         "psr-4": {
