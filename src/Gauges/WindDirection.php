@@ -17,10 +17,10 @@ class WindDirection
   
   private function render(){
 echo <<<EOT
-<canvas id="gaugeWindDirection"></canvas>
+<canvas id="ko-gauge-wind-direction"></canvas>
 <script>
-    var gaugeWindDirection = new RadialGauge({
-        renderTo: 'gaugeWindDirection',
+    new RadialGauge({
+        renderTo: 'ko-gauge-wind-direction',
         width: 300,
         height: 300,
         minValue: 0,

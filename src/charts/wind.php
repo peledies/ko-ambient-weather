@@ -35,14 +35,7 @@ class Wind
   
   private function render(){
 echo <<<EOT
-<style>
-  #windChart {
-    width: 100%;
-    height: 400px;
-  }
-</style>
-
-<canvas id="windChart"></canvas>
+<canvas id="ko-chart-wind"></canvas>
 
 <script>
   $(document).ready(function() {
@@ -51,7 +44,7 @@ echo <<<EOT
     var gust = {$this->toJson($this->gust)};
     var time = {$this->toJson($this->time)};
 
-    var ctx = document.getElementById("windChart");
+    var ctx = document.getElementById("ko-chart-wind");
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -83,10 +76,10 @@ echo <<<EOT
             ]
         },
         options: {
-              responsive: false,
+              responsive: true,
               title: {
                   display: true,
-                  text: 'Data'
+                  text: 'Wind'
               }
           }
     });

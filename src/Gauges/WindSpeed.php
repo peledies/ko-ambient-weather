@@ -31,10 +31,10 @@ class WindSpeed
   
   private function render(){
 echo <<<EOT
-<canvas id="gaugeWindSpeed"></canvas>
+<canvas id="ko-gauge-wind-speed"></canvas>
 <script>
-    var gauge = new RadialGauge({
-        renderTo: 'gaugeWindSpeed',
+    new RadialGauge({
+        renderTo: 'ko-gauge-wind-speed',
         width: 300,
         height: 300,
         units: "mi/h",

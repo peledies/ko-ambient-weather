@@ -29,15 +29,7 @@ class Temperature
   
   private function render(){
 echo <<<EOT
-
-<style>
-  #tempChart {
-    width: 100%;
-    height: 400px;
-  }
-</style>
-
-<canvas id="tempChart"></canvas>
+<canvas id="ko-chart-temperature"></canvas>
 
 <script>
   $(document).ready(function() {
@@ -45,7 +37,7 @@ echo <<<EOT
     var temp = {$this->toJson($this->temperature)};
     var times = {$this->toJson($this->time)};
 
-    var ctx = document.getElementById("tempChart");
+    var ctx = document.getElementById("ko-chart-temperature");
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -64,10 +56,10 @@ echo <<<EOT
               }]
         },
         options: {
-              responsive: false,
+              responsive: true,
               title: {
                   display: true,
-                  text: 'Data'
+                  text: 'Temperature'
               }
           }
     });

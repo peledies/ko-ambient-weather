@@ -29,14 +29,7 @@ class Barometric
   
   private function render(){
 echo <<<EOT
-<style>
-  #baroChart {
-    width: 100%;
-    height: 400px;
-  }
-</style>
-
-<canvas id="baroChart"></canvas>
+<canvas id="ko-chart-barometric"></canvas>
 
 <script>
   $(document).ready(function() {
@@ -44,7 +37,7 @@ echo <<<EOT
     var baro = {$this->toJson($this->barometric)};
     var times = {$this->toJson($this->time)};
 
-    var ctx = document.getElementById("baroChart");
+    var ctx = document.getElementById("ko-chart-barometric");
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -63,10 +56,10 @@ echo <<<EOT
               }]
         },
         options: {
-              responsive: false,
+              responsive: true,
               title: {
                   display: true,
-                  text: 'Data'
+                  text: 'Barometric Pressure'
               }
           }
     });
