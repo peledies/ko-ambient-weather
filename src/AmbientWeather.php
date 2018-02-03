@@ -10,11 +10,13 @@ class AmbientWeather
 
   	private $apiUrl = "https://api.ambientweather.net/v1/devices/";
 
-  	private $limit = 288;
+  	private $limit = null;
 
 	function __construct(Settings $settings, Cache $cache = null)
 	{
 		$this->settings = $settings;
+
+    $this->limit = $this->calculateLimit();
 
 		if(!is_null($cache)){
 			$this->cache = $cache;
@@ -33,6 +35,10 @@ class AmbientWeather
 
 		$this->data = array_reverse($this->cache->getData());
 	}
+
+  private function calculateLimit(){
+    return $this->settings->getTimeframe() * 60 / $this->settings->getInterval();
+  }
 
 	private function fetch(){
 		$url = $this->apiUrl.$this->settings->getDevice()."?apiKey=".$this->settings->getApikey()."&applicationKey=".$this->settings->getApplicationKey()."&endDate=".$this->settings->getEndDate()."&limit=".$this->limit;
