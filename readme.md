@@ -2,6 +2,9 @@
 
 This module is built for interacting with the [ambientweather.net](http://ambientweather.net) API. It utilizes the [ko\json-cache](https://github.com/peledies/ko-json-cache) module to reduce pressure on the ambient weather API and to provide a faster load time for the weather station data.
 
+### Demo
+[Weather Data Demo](https://weather.karnsonline.com)
+
 ## Install
 ```php
 composer require ko/ambient-weather
