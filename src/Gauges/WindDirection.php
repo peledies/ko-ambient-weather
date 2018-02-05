@@ -3,6 +3,19 @@ namespace KO\AmbientWeather\Gauges;
 
 use KO\AmbientWeather\AmbientWeather;
 
+/**
+* Render a Wind Direction Gauge
+*
+* @example
+* <code>
+*   new KO\AmbientWeather\Gauges\WindDirection($AW);
+* </code>
+*
+* @return string - HTML/Javascript
+*
+* @since   0.0.1
+* @author  Deac Karns <peledies@gmail.com> 
+**/
 class WindDirection
 {
   

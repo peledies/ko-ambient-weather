@@ -1,0 +1,5 @@
+parameters:
+    visibilityLevels: [public, protected, private]
+    accessLevels: [public, protected, private]
+    annotationGroups: [todo, deprecated]
+    overwrite: true

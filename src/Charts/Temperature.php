@@ -3,6 +3,19 @@ namespace KO\AmbientWeather\Charts;
 
 use KO\AmbientWeather\AmbientWeather;
 
+/**
+* Render a Temperature chart
+*
+* @example
+* <code>
+*   new KO\AmbientWeather\Charts\Temperature($AW);
+* </code>
+*
+* @return string - HTML/Javascript
+*
+* @since   0.0.1
+* @author  Deac Karns <peledies@gmail.com> 
+**/
 class Temperature
 {
   

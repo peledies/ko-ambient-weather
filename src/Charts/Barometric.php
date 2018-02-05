@@ -3,6 +3,19 @@ namespace KO\AmbientWeather\Charts;
 
 use KO\AmbientWeather\AmbientWeather;
 
+/**
+* Render a Barometric pressure chart
+*
+* @example
+* <code>
+*   new KO\AmbientWeather\Charts\Barometric($AW);
+* </code>
+*
+* @return string - HTML/Javascript
+*
+* @since   0.0.1
+* @author  Deac Karns <peledies@gmail.com> 
+**/
 class Barometric
 {
   
